@@ -10,6 +10,10 @@
     "url":   "http://unindented.org/"
   },
 
+  "bin": {
+    "nuget": "./vendor/nuget/NuGet.exe"
+  },
+
   "repository": {
     "type": "git",
     "url":  "git://github.com/unindented/grunt-electron-windows-installer.git"

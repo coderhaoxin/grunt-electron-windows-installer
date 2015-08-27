@@ -183,7 +183,7 @@ var createApplication = function (options, dir, callback) {
  */
 var createDir = function (options, callback) {
   async.waterfall([
-    async.apply(temp.mkdir, 'electron-'),
+    async.apply(temp.mkdir, 'e-'),
     function (dir, callback) {
       dir = path.join(dir, options.name + '_' + options.version);
       fs.ensureDir(dir, callback);
@@ -225,7 +225,8 @@ var createPackage = function (options, dir, callback) {
   var nugetDir = path.join(dir, 'nuget');
   var specFile = path.join(nugetDir, options.name + '.nuspec');
 
-  var cmd = path.resolve(__dirname, '../vendor/nuget/NuGet.exe');
+  // var cmd = path.resolve(__dirname, '../vendor/nuget/NuGet.exe');
+  cmd = 'nuget'
   var args = [
     'pack',
     specFile,
